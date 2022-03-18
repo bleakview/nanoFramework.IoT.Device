@@ -4,7 +4,7 @@ The SSD1306/SSH1106 are a single-chip CMOS OLED/PLED driver with controllers for
 
 ## Documentation
 
-- IoT NanoFramework SSD1306/SSH1106 [Driver](https://github.com/nanoframework/nanoFramework.IoT.Device)
+- IoT NanoFramework SSD1306/SSH1106 [Driver](https://github.com/nanoframework/nanoFramework.Iot.Device)
 - SSD1306 [datasheet](https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf)
 - SSD1327 [datasheet](https://github.com/SeeedDocument/Grove_OLED_1.12/raw/master/resources/SSD1327_datasheet.pdf)
 

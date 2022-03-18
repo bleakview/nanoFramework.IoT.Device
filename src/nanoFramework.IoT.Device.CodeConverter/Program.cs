@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace nanoFramework.IoT.Device.CodeConverter
+namespace nanoFramework.Iot.Device.CodeConverter
 {
     class Program
     {

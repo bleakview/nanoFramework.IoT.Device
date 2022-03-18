@@ -12,9 +12,9 @@
     </releaseNotes>
     <readme>docs\README.md</readme>
     <developmentDependency>false</developmentDependency>
-    <projectUrl>https://github.com/nanoframework/nanoFramework.IoT.Device</projectUrl>
+    <projectUrl>https://github.com/nanoframework/nanoFramework.Iot.Device</projectUrl>
     <icon>images\nf-logo.png</icon>
-    <repository type="git" url="https://github.com/nanoframework/nanoFramework.IoT.Device" commit="$commit$" />
+    <repository type="git" url="https://github.com/nanoframework/nanoFramework.Iot.Device" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>This package includes the .NET IoT Core binding Iot.Device.Ssd1351 for .NET nanoFramework C# projects.</description>
     <summary>Iot.Device.Ssd1351 assembly for .NET nanoFramework C# projects</summary>

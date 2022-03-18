@@ -70,9 +70,9 @@ steps:
 - task: PowerShell@2
   displayName: Build and pack solutions
   inputs:
-    workingDirectory: 'nanoFramework.IoT.Device\devices'
+    workingDirectory: 'nanoFramework.Iot.Device\devices'
     targetType: 'filePath'
-    filePath: '$(Build.Repository.LocalPath)\nanoFramework.IoT.Device\.pipeline-assets\pipeline-build-solutions.PS1'
+    filePath: '$(Build.Repository.LocalPath)\nanoFramework.Iot.Device\.pipeline-assets\pipeline-build-solutions.PS1'
   env:
     MY_GITHUBTOKEN: $(GitHubToken)
 
@@ -103,12 +103,12 @@ steps:
     .\SignClient "Sign" `
     --baseDirectory "$(Build.ArtifactStagingDirectory)" `
     --input "**/*.nupkg" `
-    --config "$(Build.Repository.LocalPath)\nanoFramework.IoT.Device\config\SignClient.json" `
-    --filelist "$(Build.Repository.LocalPath)\nanoFramework.IoT.Device\config\filelist.txt" `
+    --config "$(Build.Repository.LocalPath)\nanoFramework.Iot.Device\config\SignClient.json" `
+    --filelist "$(Build.Repository.LocalPath)\nanoFramework.Iot.Device\config\filelist.txt" `
     --user "$(SignClientUser)" `
     --secret '$(SignClientSecret)' `
-    --name "IoT.Device" `
-    --description "IoT.Device" `
+    --name "Iot.Device" `
+    --description "Iot.Device" `
     --descriptionUrl "https://github.com/$env:Build_Repository_Name"
   displayName: Sign packages
   continueOnError: true
@@ -166,7 +166,7 @@ steps:
     command: custom
     custom: run
     projects: '**/device-listing.csproj'
-    workingDirectory: 'nanoFramework.IoT.Device'
+    workingDirectory: 'nanoFramework.Iot.Device'
 
 - task: PowerShell@2
   condition: >-
@@ -177,7 +177,7 @@ steps:
   displayName: Push READMEs to GitHub
   continueOnError: true
   inputs:
-    workingDirectory: 'nanoFramework.IoT.Device'
+    workingDirectory: 'nanoFramework.Iot.Device'
     targetType: 'inline'
     script: |
       git config user.email 'nanoframework@outlook.com'
@@ -198,7 +198,7 @@ steps:
 # report error
 - template: azure-pipelines-templates/discord-webhook-task.yml@templates  
   parameters:
-    workingDirectory: 'nanoFramework.IoT.Device'
+    workingDirectory: 'nanoFramework.Iot.Device'
     status: 'failure'
     webhookUrl: '$(DiscordWebhook)'
     message: ''

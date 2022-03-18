@@ -2,7 +2,7 @@ Output of the last device generation run:
 
 ## Successful builds:
 
-nanoFramework.IoT.Device\src\devices_generated\Arduino\samples\Arduino.sample.sln nanoFramework.IoT.Device\src\devices_generated\Bh1745\samples\Bh1745CustomConfiguration.Sample.sln nanoFramework.IoT.Device\src\devices_generated\Rtc\Rtc.sln nanoFramework.IoT.Device\src\devices_generated\Ssd13xx\tests\Ssd13xx.Tests.sln nanoFramework.IoT.Device\src\devices_generated\System.Device.Model\System.Device.Model.sln
+nanoFramework.Iot.Device\src\devices_generated\Arduino\samples\Arduino.sample.sln nanoFramework.Iot.Device\src\devices_generated\Bh1745\samples\Bh1745CustomConfiguration.Sample.sln nanoFramework.Iot.Device\src\devices_generated\Rtc\Rtc.sln nanoFramework.Iot.Device\src\devices_generated\Ssd13xx\tests\Ssd13xx.Tests.sln nanoFramework.Iot.Device\src\devices_generated\System.Device.Model\System.Device.Model.sln
 
 ## Failed builds:
 
@@ -150,7 +150,7 @@ Count Name
     3  CS0616: 'Mhz19b.Command' is not an attribute class
     3  CS0234: The type or namespace name 'Analog' does not exist in the namespace 'System.Device' (are you missing an assembly reference?)
     3  CS0234: The type or namespace name 'Azure' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?)
-    3  CS2001: Source file 'nanoFramework.IoT.Device\src\devices_generated\Seesaw\samples\../../../../samples/led-more-blinking-lights/TimeEnvelope.cs'… 
+    3  CS2001: Source file 'nanoFramework.Iot.Device\src\devices_generated\Seesaw\samples\../../../../samples/led-more-blinking-lights/TimeEnvelope.cs'… 
     3  CS0103: The name 'v4l2_frmsizetypes' does not exist in the current context 
     3  CS0234: The type or namespace name 'Commands' does not exist in the namespace 'Iot.Device.Ssd13xx' (are you missing an assembly reference?)
     3  CS0103: The name 'FrameRateBit' does not exist in the current context
@@ -168,7 +168,7 @@ Count Name
     3  CS0246: The type or namespace name 'ConcurrentDictionary<,>' could not be found (are you missing a using directive or an assembly reference?)
     3  CS0246: The type or namespace name 'Data106kbpsTypeA' could not be found (are you missing a using directive or an assembly reference?)
     2  CS0234: The type or namespace name 'Immutable' does not exist in the namespace 'System.Collections' (are you missing an assembly reference?)
-    2  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\Common\CommonHelpers.csproj" was not found.
+    2  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\Common\CommonHelpers.csproj" was not found.
     2  CS0246: The type or namespace name 'MifareCardCommand' could not be found (are you missing a using directive or an assembly reference?)
     2  CS0234: The type or namespace name 'HardwareMonitor' does not exist in the namespace 'Iot.Device' (are you missing an assembly reference?)
     2  CS0246: The type or namespace name 'FrameRate' could not be found (are you missing a using directive or an assembly reference?)
@@ -288,26 +288,26 @@ Count Name
     1  CS0115: 'Ak8963Attached.ReadBytes(I2cDevice, byte, SpanByte)': no suitable method found to override
     1  CS0540: 'Lights.IEnumerable.GetEnumerator()': containing type does not implement interface 'IEnumerable'
     1  CS0115: 'Ak8963Attached.ReadByte(I2cDevice, byte)': no suitable method found to override
-    1  CS2001: Source file 'nanoFramework.IoT.Device\src\devices_generated\Gpio\../Interop/Unix/Interop.Libraries.cs' could not be found. 
-    1  CS2001: Source file 'nanoFramework.IoT.Device\src\devices_generated\Gpio\../Interop/Unix/Libc/Interop.libc.cs' could not be found.
-    1  CS2001: Source file 'nanoFramework.IoT.Device\src\devices_generated\RGBLedMatrix\../Interop/Unix/ThreadHelper.cs' could not be found.
-    1  CS2001: Source file 'nanoFramework.IoT.Device\src\devices_generated\RGBLedMatrix\samples\../../Interop/Unix/ThreadHelper.cs' could not be found.  
+    1  CS2001: Source file 'nanoFramework.Iot.Device\src\devices_generated\Gpio\../Interop/Unix/Interop.Libraries.cs' could not be found. 
+    1  CS2001: Source file 'nanoFramework.Iot.Device\src\devices_generated\Gpio\../Interop/Unix/Libc/Interop.libc.cs' could not be found.
+    1  CS2001: Source file 'nanoFramework.Iot.Device\src\devices_generated\RGBLedMatrix\../Interop/Unix/ThreadHelper.cs' could not be found.
+    1  CS2001: Source file 'nanoFramework.Iot.Device\src\devices_generated\RGBLedMatrix\samples\../../Interop/Unix/ThreadHelper.cs' could not be found.  
     1  CS0506: 'SoftwareSpi.Read(SpanByte)': cannot override inherited member 'SpiDevice.Read(SpanByte)' because it is not marked virtual, abstract, or override
     1  CS0111: Type 'Program' already defines a member called 'Main' with the same parameter types
     1  CS0103: The name 'MagneticInductionScale' does not exist in the current context
     1  CS0103: The name 'AngularRateScale' does not exist in the current context
     1  CS8179: Predefined type 'System.ValueTuple`6' is not defined or imported
     1  CS0103: The name 'AccelerationScale' does not exist in the current context
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\Card\CardRfid.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\Card\CreditCard\CreditCardProcessing.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\Card\Mifare\Mifare.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\Card\CardRfid.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\Card\CreditCard\CreditCardProcessing.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\Card\Mifare\Mifare.csproj" was not found.
     1  CS0101: The namespace 'Arduino.Samples' already contains a definition for 'Program'
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\Common\samples\Common.Samples.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\Common\tests\Common.Tests.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\GrovePi\GrovePiDevice.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\GrovePi\samples\GrovePiDevice.sample.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\PiJuice\PiJuiceDevice.csproj" was not found.
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\PiJuice\samples\PiJuiceDevice.sample.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\Common\samples\Common.Samples.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\Common\tests\Common.Tests.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\GrovePi\GrovePiDevice.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\GrovePi\samples\GrovePiDevice.sample.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\PiJuice\PiJuiceDevice.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\PiJuice\samples\PiJuiceDevice.sample.csproj" was not found.
     1  CS0111: Type 'Program' already defines a member called 'BoardOnLogMessages' with the same parameter types
     1  CS0506: 'SoftwareSpi.Dispose(bool)': cannot override inherited member 'SpiDevice.Dispose(bool)' because it is not marked virtual, abstract, or override
     1  CS0506: 'SoftwareSpi.ConnectionSettings': cannot override inherited member 'SpiDevice.ConnectionSettings' because it is not marked virtual, abstract, or override      
@@ -352,7 +352,7 @@ Count Name
     1  CS0115: 'RegisterTests.BankStyleMock.PinCount': no suitable method found to override
     1  CS0115: 'Pn532.ReselectTarget(byte)': no suitable method found to override 
     1  CS0115: 'Pn5180.ReselectTarget(byte)': no suitable method found to override
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\SoftPwm\samples\SoftPwm.sample.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\SoftPwm\samples\SoftPwm.sample.csproj" was not found.
     1  CS0115: 'Pcx857xTest.GpioControllerMock.Write(int, PinValue)': no suitable method found to override
     1  CS0115: 'Pcx857xTest.GpioControllerMock.SetPinMode(int, PinMode)': no suitable method found to override
     1  CS0115: 'Pcx857xTest.GpioControllerMock.RemoveCallbackForPinValueChangedEvent(int, PinChangeEventHandler)': no suitable method found to override
@@ -483,7 +483,7 @@ Count Name
     1  CS0115: 'Mcp23xxxTest.GpioDriverMock.RemoveCallbackForPinValueChangedEvent(int, PinChangeEventHandler)': no suitable method found to override
     1  CS0115: 'Mcp23xxxTest.GpioDriverMock.SetPinMode(int, PinMode)': no suitable method found to override 
     1  CS0115: 'Mcp23xxxTest.GpioDriverMock.IsPinModeSupported(int, PinMode)': no suitable method found to override
-    1  MSB3202: The project file "nanoFramework.IoT.Device\src\devices_generated\SoftPwm\SoftwarePwm.csproj" was not found.
+    1  MSB3202: The project file "nanoFramework.Iot.Device\src\devices_generated\SoftPwm\SoftwarePwm.csproj" was not found.
 
 
 ## PROJECTS

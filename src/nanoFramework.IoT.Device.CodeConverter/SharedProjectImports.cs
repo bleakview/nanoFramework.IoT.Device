@@ -1,4 +1,4 @@
-﻿namespace nanoFramework.IoT.Device.CodeConverter
+﻿namespace nanoFramework.Iot.Device.CodeConverter
 {
     public static class SharedProjectImports
     {

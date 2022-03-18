@@ -28,7 +28,7 @@ if($env:DEVICE_TO_BUILD -eq "")
 
         do
         {
-            $batch = Invoke-RestMethod -Uri "https://api.github.com/repos/nanoframework/nanoFramework.IoT.Device/pulls/$env:System_PullRequest_PullRequestNumber/files?per_page=100&page=$pageCounter" -Header @{"Authorization"="$auth"} -ContentType "application/json" -Method GET
+            $batch = Invoke-RestMethod -Uri "https://api.github.com/repos/nanoframework/nanoFramework.Iot.Device/pulls/$env:System_PullRequest_PullRequestNumber/files?per_page=100&page=$pageCounter" -Header @{"Authorization"="$auth"} -ContentType "application/json" -Method GET
 
             if($null -eq $commit)
             {
@@ -55,7 +55,7 @@ if($env:DEVICE_TO_BUILD -eq "")
         "" | Write-Host -ForegroundColor Yellow
 
         # get files changed in the commit, if this is NOT a PR
-        $commit = Invoke-RestMethod -Uri "https://api.github.com/repos/nanoframework/nanoFramework.IoT.Device/commits/$env:Build_SourceVersion" -Header @{"Authorization"="$auth"} -ContentType "application/json" -Method GET
+        $commit = Invoke-RestMethod -Uri "https://api.github.com/repos/nanoframework/nanoFramework.Iot.Device/commits/$env:Build_SourceVersion" -Header @{"Authorization"="$auth"} -ContentType "application/json" -Method GET
 
         # filter removed files              
         $files = $commit.files.where{$_.status -ne 'removed'}
@@ -89,7 +89,7 @@ elseif($env:DEVICE_TO_BUILD -eq "ALL")
 {
     Write-Host "Building 'all' packages"
 
-    $files = (Get-ChildItem -Path "$env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\" -Include "*.sln"  -Recurse)
+    $files = (Get-ChildItem -Path "$env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\" -Include "*.sln"  -Recurse)
     $deviceFolders = $files | Foreach-Object {$_.Directory.Name}
 }
 else
@@ -112,7 +112,7 @@ foreach ($folder in $deviceFolders)
     "" | Write-Host -ForegroundColor Yellow
     
     # try to find the solution
-    $solutionFile = Get-ChildItem -Path "$env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\$folder\" -Include "$folder.sln" -Recurse
+    $solutionFile = Get-ChildItem -Path "$env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\$folder\" -Include "$folder.sln" -Recurse
 
     if($null -eq $solutionFile)
     {
@@ -129,7 +129,7 @@ foreach ($folder in $deviceFolders)
     }
 
     # try to find the nuspec
-    $nuspecFile = Get-ChildItem -Path "$env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\$folder\" -Include "$folder.nuspec" -Recurse
+    $nuspecFile = Get-ChildItem -Path "$env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\$folder\" -Include "$folder.nuspec" -Recurse
 
     if($null -eq $nuspecFile)
     {
@@ -158,13 +158,13 @@ foreach ($folder in $deviceFolders)
         $solutionFile.Name -eq "Pn5180.sln" -or 
         $solutionFile.Name -eq "Pn532.sln")
     {
-        nuget restore $env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\Card\Card.sln
+        nuget restore $env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\Card\Card.sln
     }
 
     # Mpu9250 solutions requires Ak8963 to be restored too
     if ($solutionFile.Name -eq "Mpu9250.sln")
     {
-        nuget restore $env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\Ak8963\Ak8963.sln
+        nuget restore $env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\Ak8963\Ak8963.sln
     }
 
     try
@@ -176,7 +176,7 @@ foreach ($folder in $deviceFolders)
         ########################
         # perform versions check
 
-        nanovc --working-directory $env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\$folder --solution-to-check $solutionFile --nuspec-file $nuspecFile
+        nanovc --working-directory $env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\$folder --solution-to-check $solutionFile --nuspec-file $nuspecFile
 
         if($LASTEXITCODE -eq 0)
         {
@@ -186,7 +186,7 @@ foreach ($folder in $deviceFolders)
 
             #############
             # get version
-            $nbgvArgs = @('get-version', '-p', "$env:BUILD_SOURCESDIRECTORY\nanoFramework.IoT.Device\devices\$folder", '-f', 'json')
+            $nbgvArgs = @('get-version', '-p', "$env:BUILD_SOURCESDIRECTORY\nanoFramework.Iot.Device\devices\$folder", '-f', 'json')
             $versionData = & 'nbgv' $nbgvArgs | ConvertFrom-Json
 
             $versionReplacement = "-g"+$versionData.GitCommitIdShort
